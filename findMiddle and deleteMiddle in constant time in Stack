@@ -1,4 +1,5 @@
 /*
+Please go to the link and read the explanation
 http://www.geeksforgeeks.org/design-a-stack-with-find-middle-operation/
 
 How to implement a stack which will support following operations in O(1) time complexity?
