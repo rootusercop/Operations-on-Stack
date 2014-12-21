@@ -15,7 +15,7 @@ public class DoubleStack
 
         public void Push(int value){
                 _normalStack.Push(value);
-                if(value<_minValue)
+                if(value<_minValue)                 // values will only be pushed to minStack if the current value is less than or equal to the minValue
                 {
                         _minStack.Push(value);
                         _minValue=value;        
@@ -24,11 +24,12 @@ public class DoubleStack
 
         public int Pop(){
                 if(_normalStack.Count==0) return Int32.MaxValue;
-                if(_normalStack.Peek()==_minStack.Peek())
+                if(_normalStack.Peek()==_minStack.Peek())     // pop from both the stacks
                 {
+                        _normalStack.Pop();
                         return _minStack.Pop();        
                 }
-                return _normalStack.Pop();
+                return _normalStack.Pop();                     // pop only from the main stack
         }
 
         public int GetMin(){
